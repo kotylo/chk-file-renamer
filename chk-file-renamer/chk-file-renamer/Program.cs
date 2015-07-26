@@ -33,17 +33,27 @@ namespace chk_file_renamer
             {
                 new FileBytes()
                 {
-                    Bytes = new byte[] {0x49, 0x44, 0x33, 0x04},
+                    Bytes = new byte[] {0x49, 0x44, 0x33},
                     Extension = "mp3"
                 },
                 new FileBytes()
                 {
-                    Bytes = new byte[] {0x49, 0x44, 0x33, 0x03},
+                    Bytes = new byte[] {0xff, 0xfb, 0xc0, 0x04},
                     Extension = "mp3"
                 },
                 new FileBytes()
                 {
-                    Bytes = new byte[] { 0x00, 0x00, 0x01, 0xba},
+                    Bytes = new byte[] {0xff, 0xfb, 0xb0, 0x64},
+                    Extension = "mp3"
+                },
+                new FileBytes()
+                {
+                    Bytes = new byte[] {0xff, 0xfb},
+                    Extension = "mp3"
+                },
+                new FileBytes()
+                {
+                    Bytes = new byte[] {0x00, 0x00, 0x01, 0xba},
                     Extension = "mov"
                 },
                 new FileBytes()
@@ -55,6 +65,11 @@ namespace chk_file_renamer
                 {
                     Bytes = new byte[] {0x77, 0x76, 0x70, 0x6b},
                     Extension = "wav"
+                },
+                new FileBytes()
+                {
+                    Bytes = new byte[] {0x66, 0x4c, 0x61, 0x43},
+                    Extension = "flac"
                 },
             };
 
